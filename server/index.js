@@ -12,6 +12,7 @@ const DB = "mongodb+srv://lucas:eu123456@cluster0.dmdybu6.mongodb.net/?retryWrit
 
 
 // middleware
+app.use(express.json());
 app.use(authRouter);
 
 
@@ -26,6 +27,6 @@ mongoose
 });
 
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Connected at PORT ${PORT}`);
 });
